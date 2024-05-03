@@ -26,6 +26,10 @@ html {
     scroll-behavior: smooth;
 }
 
+html::-webkit-scrollbar {
+    /* width: 0.8rem; */
+}
+
 body {
     background: var(--bg);
     color: var(--white);
@@ -60,16 +64,58 @@ a {
     cursor: pointer;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: var(--white);
     color: var(--main-color)
 }
 
-header{
+header {
     background-color: var(--bg);
     border-bottom: var(--border);
     display: flex;
     padding: 1.5rem 7%;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+header .logo img {
+    height: 6rem;
+}
+
+header .navbar a {
+    margin: 01rem;
+    font-size: 1.6rem;
+}
+
+header .navbar a:hover {
+    color: var(--main-color);
+    border-bottom: 0.1rem solid var(--main-color);
+    padding-bottom: 0.5rem;
+}
+
+header .icons div {
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin: 2rem;
+}
+
+#menu-btn{
+    display: none;
+}
+
+header .icons div:hover{
+    color: var(--main-color);
+} 
+
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(../images/home-img.jpeg);
+    background-size: cover;
+    background-position: center;
 }
